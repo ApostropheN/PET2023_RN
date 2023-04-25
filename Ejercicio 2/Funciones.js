@@ -29,7 +29,7 @@ function ingresarNumero(arrayNumeros){
     while ( isNaN(num) || num<=0 || num==""){ // verifico que sean numeros positivos
         num = prompt("Solo numeros mayores o igual a cero. Ingrese un numero"); // Si no se cumplen las condiciones vuelvo a pedir un numero hasta que se cumplan
     }
-    arrayNumeros.push(num);
+    arrayNumeros.push(Number(num));
 }
 
 function tipoOrden(){
@@ -42,9 +42,9 @@ function tipoOrden(){
 
 function mostrarAscendente(arrayNumeros){
     document.getElementById("Resultados").innerHTML = "<a>El Array ingresado es: [ " + arrayNumeros + " ]</a><br>";
-    for (var  j = 0; j < arrayNumeros.length -1 ; j++){
+    for (var  j = 0; j < arrayNumeros.length -1 ; j++){//Bubble sort
         for (var i = 0 ; i < arrayNumeros.length -1; i++ ){
-            if ( Number(arrayNumeros[i]) > Number(arrayNumeros[i+1]) ){//Verifico si el siguiente tiene un valor superior
+            if ( arrayNumeros[i] > arrayNumeros[i+1] ){//Verifico si el siguiente tiene un valor superior
                 cambio = arrayNumeros[i+1];//Si es superior transfiero el valor a cambio y luego a la siguiente posicion en el array
                 arrayNumeros [i+1] =  arrayNumeros[i];
                 arrayNumeros[i] = cambio;
@@ -52,22 +52,15 @@ function mostrarAscendente(arrayNumeros){
         }
     }
     alert(arrayNumeros);
-    document.getElementById("Resultados").innerHTML += "<a>El Array ordenado es: [ ";
-    for (i = 0 ; i < arrayNumeros.length ; i++){
-        if ( i < arrayNumeros.length - 1){
-            document.getElementById("Resultados").innerHTML += arrayNumeros[i] + " , ";
-        } else {
-            document.getElementById("Resultados").innerHTML += arrayNumeros[i];
-        }
-    }
-    document.getElementById("Resultados").innerHTML += " ]</a><br><a>Orden: Ascendente</a>";    
+    document.getElementById("Resultados").innerHTML += "<a>El Array ordenado es: [ " + arrayNumeros + " ]</a><br>\
+                                                        <a>El orden es: Ascendente</a>";
 }
 
 function mostrarDescendente(arrayNumeros){
     document.getElementById("Resultados").innerHTML = "<a>El Array ingresado es: [ " + arrayNumeros + " ]</a><br>";
-    for (var  j = 0; j < arrayNumeros.length -1 ; j++){
+    for (var  j = 0; j < arrayNumeros.length -1 ; j++){ //Bubble sort desc
         for (var i = 0 ; i < arrayNumeros.length -1; i++ ){
-            if ( Number(arrayNumeros[i]) < Number(arrayNumeros[i+1]) ){
+            if ( arrayNumeros[i] < arrayNumeros[i+1] ){
                 cambio = arrayNumeros[i+1];
                 arrayNumeros [i+1] =  arrayNumeros[i];
                 arrayNumeros[i] = cambio;
@@ -75,13 +68,6 @@ function mostrarDescendente(arrayNumeros){
         }
     }
     alert(arrayNumeros);
-    document.getElementById("Resultados").innerHTML += "<a>El Array ordenado es: [ ";
-    for (i = 0 ; i < arrayNumeros.length ; i++){
-        if ( i < arrayNumeros.length - 1){
-            document.getElementById("Resultados").innerHTML += arrayNumeros[i] + " , ";
-        } else {
-            document.getElementById("Resultados").innerHTML += arrayNumeros[i];
-        }
-    }
-    document.getElementById("Resultados").innerHTML += " ]</a><br><a>Orden: Descendente</a>";    
+    document.getElementById("Resultados").innerHTML += "<a>El Array ordenado es: [ " + arrayNumeros + " ]</a><br>\
+                                                        <a>El orden es: Ascendente</a>";
 }
