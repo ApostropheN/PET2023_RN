@@ -25,8 +25,9 @@ function OrdenarNumeros(){
 }
 
 function ingresarNumero(arrayNumeros){
-    var num = prompt("Ingrese un numero positivo o cero para salir"); // prompt solicitando numero
-    while ( isNaN(num) || num<=0 || num==""){ // verifico que sean numeros positivos
+    let num = "";
+    num = prompt("Ingrese un numero positivo o cero para salir"); // prompt solicitando numero
+    while ( isNaN(num) || num<=0 || num.trim()==""){ // verifico que sean numeros positivos
         num = prompt("Solo numeros mayores o igual a cero. Ingrese un numero"); // Si no se cumplen las condiciones vuelvo a pedir un numero hasta que se cumplan
     }
     arrayNumeros.push(Number(num));
@@ -54,6 +55,11 @@ function mostrarAscendente(arrayNumeros){
     alert(arrayNumeros);
     document.getElementById("Resultados").innerHTML += "<a>El Array ordenado es: [ " + arrayNumeros + " ]</a><br>\
                                                         <a>El orden es: Ascendente</a>";
+}
+
+function mostrarAscendente(arrayNumeros){
+    document.getElementById("Resultados").innerHTML = "<a>El Array ingresado es: [ " + arrayNumeros + " ]</a><br>";
+    
 }
 
 function mostrarDescendente(arrayNumeros){
