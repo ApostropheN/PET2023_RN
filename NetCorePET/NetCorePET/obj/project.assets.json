@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITLM\\3er Cuatrimestre\\PET\\NetCorePET\\NetCorePET\\NetCorePET.csproj",
+      "projectUniqueName": "D:\\ITLM\\3er Cuatrimestre\\PET\\PET2023_RN\\NetCorePET\\NetCorePET\\NetCorePET.csproj",
       "projectName": "NetCorePET",
-      "projectPath": "D:\\ITLM\\3er Cuatrimestre\\PET\\NetCorePET\\NetCorePET\\NetCorePET.csproj",
+      "projectPath": "D:\\ITLM\\3er Cuatrimestre\\PET\\PET2023_RN\\NetCorePET\\NetCorePET\\NetCorePET.csproj",
       "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
-      "outputPath": "D:\\ITLM\\3er Cuatrimestre\\PET\\NetCorePET\\NetCorePET\\obj\\",
+      "outputPath": "D:\\ITLM\\3er Cuatrimestre\\PET\\PET2023_RN\\NetCorePET\\NetCorePET\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config",

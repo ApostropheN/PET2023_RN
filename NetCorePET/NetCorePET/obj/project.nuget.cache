@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GWs8fX+t0W2QINdUqiv2ZFpInghfF8YKf11icZ7QVUIer4Onn/TUvzh6UhaSj9qak50IGyx4u4IYLJC5QDtcjQ==",
+  "dgSpecHash": "Vavc+mD9xeE6ND/TiSGaQgYO7VI7wdgyYUQ3hf1YrC2WmM7JO6ewTu1+Ca47/5lgNHUETTXrKdUocRi399skwg==",
   "success": true,
-  "projectFilePath": "D:\\ITLM\\3er Cuatrimestre\\PET\\NetCorePET\\NetCorePET\\NetCorePET.csproj",
+  "projectFilePath": "D:\\ITLM\\3er Cuatrimestre\\PET\\PET2023_RN\\NetCorePET\\NetCorePET\\NetCorePET.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
