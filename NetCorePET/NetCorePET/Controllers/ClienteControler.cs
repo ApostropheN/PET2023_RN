@@ -10,7 +10,7 @@ namespace NetCorePET.Controllers
     {
         [HttpGet]
         [Route("Listar")]
-        public dynamic listarCliente()
+        public IActionResult listarCliente()
         {
             List<Cliente> clientes = new List<Cliente>
             {
@@ -43,36 +43,36 @@ namespace NetCorePET.Controllers
                     nombre = "Messi"
                 },
             };
-            return clientes;
+            return Ok(clientes);
         }
 
         [HttpGet]
         [Route("listarporid")]
-        public dynamic listarClienteporid(int codigo)
+        public IActionResult listarClienteporid(int codigo)
         {
 
-            return new Cliente
+            return Ok(new Cliente
             {
                 id = codigo.ToString(),
                 correo = "google@itlm.com.ar",
                 edad = "23",
                 nombre = "Prueba 212"
-            };
+            });
 
         }
 
         [HttpPost]
         [Route("guardar")]
-        public dynamic guardarCliente(Cliente cliente)
+        public IActionResult guardarCliente(Cliente cliente)
         {
             cliente.id = "3";
 
-            return new
+            return Ok(new
             {
                 success = true,
                 message = "cliente registrado",
                 result = cliente
-            };
+            });
         }
 
         [HttpPost]
