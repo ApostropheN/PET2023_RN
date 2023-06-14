@@ -12,6 +12,8 @@ namespace NetCorePET.Controllers
         [Route("Listar")]
         public IActionResult listarCliente()
         {
+            string token = Request.Headers.Where(x => x.Key == "Authorization").FirstOrDefault().Value;
+
             List<Cliente> clientes = new List<Cliente>
             {
                 new Cliente
@@ -43,6 +45,17 @@ namespace NetCorePET.Controllers
                     nombre = "Messi"
                 },
             };
+            if (token != "marco123.")
+            {
+                return BadRequest(new
+
+                {
+                    success = false,
+                    message = "token incorrecto",
+                    result = ""
+                });
+            }
+
             return Ok(clientes);
         }
 
@@ -50,6 +63,19 @@ namespace NetCorePET.Controllers
         [Route("listarporid")]
         public IActionResult listarClienteporid(int codigo)
         {
+
+            string token = Request.Headers.Where(x => x.Key == "Authorization").FirstOrDefault().Value;
+
+            if (token != "marco123.")
+            {
+                return BadRequest(new
+
+                {
+                    success = false,
+                    message = "token incorrecto",
+                    result = ""
+                });
+            }
 
             return Ok(new Cliente
             {
@@ -66,6 +92,19 @@ namespace NetCorePET.Controllers
         public IActionResult guardarCliente(Cliente cliente)
         {
             cliente.id = "3";
+
+            string token = Request.Headers.Where(x => x.Key == "Authorization").FirstOrDefault().Value;
+
+            if (token != "marco123.")
+            {
+                return BadRequest(new
+
+                {
+                    success = false,
+                    message = "token incorrecto",
+                    result = ""
+                });
+            }
 
             return Ok(new
             {
